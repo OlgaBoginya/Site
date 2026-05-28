@@ -552,10 +552,16 @@ h2 {
   animation: ringBreath 4.8s ease-in-out infinite;
 }
 
-
-.numbers-map:hover .numbers-image {
-  filter: saturate(1.08);
-  transform: translateX(-50%) translateY(-4px);
+.numbers-image {
+  position: absolute;
+  left: 50%;
+  top: 330px;
+  width: 380px;
+  height: 320px;
+  object-fit: contain;
+  pointer-events: none;
+  transform: translateX(-50%);
+  transition: none !important;
 }
 
 .stat {
@@ -1586,7 +1592,6 @@ h3 {
     width: 250px;
     height: 250px;
     border-width: 3px;
-    transform: translateX(-50%);
   }
 
   .numbers-image {
