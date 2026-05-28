@@ -2078,6 +2078,14 @@ h3 {
     font-size: 17px;
   }
 
+  .button-pdf-desktop {
+    display: none;
+  }
+
+  .button-pdf-mobile {
+    display: inline-flex;
+  }
+
   .site-footer {
     margin-top: 0;
   }

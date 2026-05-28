@@ -245,14 +245,9 @@ const defaultInfoImage = {
 };
 
 function setInfoImage(src, alt) {
-  if (!infoImage || infoImage.getAttribute("src") === src) return;
-  infoImage.classList.add("is-changing");
-
-  window.setTimeout(() => {
-    infoImage.src = src;
-    infoImage.alt = alt;
-    infoImage.classList.remove("is-changing");
-  }, 150);
+  if (!infoImage || !src) return;
+  infoImage.src = src;
+  infoImage.alt = alt || "";
 }
 
 infoCards.forEach((card) => {
@@ -273,6 +268,12 @@ infoCards.forEach((card) => {
     card.setAttribute("aria-expanded", "true");
     setInfoImage(card.dataset.infoImage, card.dataset.infoAlt);
   });
+});
+
+infoCards.forEach((card) => {
+  if (!card.dataset.infoImage) return;
+  const image = new Image();
+  image.src = card.dataset.infoImage;
 });
 
 const gallery = document.querySelector("[data-gallery]");
