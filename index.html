@@ -4,13 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Румбокс</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260529-11">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#top" aria-label="Румбокс">РУМБОКС</a>
-      <nav class="main-nav" aria-label="Основная навигация">
+      <a class="logo" href="#top" aria-label="Румбокс">Румбокс</a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
         <a href="#meaning">Значение</a>
         <a href="#types">Виды</a>
         <a href="#advantages">Преимущества</a>
@@ -29,7 +34,7 @@
           <a class="button" href="#meaning">Изучить</a>
         </div>
         <div class="hero-media">
-          <img src="фотки обр/DSC_0027-no-bg-preview (carve.photos) 1.png" alt="Миниатюрный домик румбокс">
+          <img src="фотки обр/DSC_0027.png" alt="Миниатюрный домик румбокс">
         </div>
       </div>
     </section>
@@ -41,7 +46,7 @@
           <span>01</span>
         </div>
         <div class="meaning-layout">
-          <img class="meaning-image" src="фотки обр/DSC_0030.jpg" alt="Крупный план миниатюрного домика" loading="lazy">
+          <img class="meaning-image" src="фотки обр/DSC_0049.jpg" alt="Крупный план миниатюрного домика" loading="lazy">
           <div class="accordion">
             <article class="accordion-item is-open">
               <button type="button" aria-expanded="true">
@@ -86,7 +91,7 @@
           <div class="type-grid" data-slider>
             <article class="type-card">
               <div class="type-image">
-                <img src="фотки обр/DSC_0027-no-bg-preview (carve.photos) 1.png" alt="Классический румбокс" loading="lazy">
+                <img src="фотки обр/DSC_0030.png" alt="Классический румбокс" loading="lazy">
               </div>
               <div class="type-text">
                 <h3>Классический румбокс</h3>
@@ -95,7 +100,7 @@
             </article>
             <article class="type-card is-featured">
               <div class="type-image">
-                <img src="фотки обр/DSC_0011.jpg" alt="Румбокс-блокнот" loading="lazy">
+                <img src="фотки обр/DSC_0011.png" alt="Румбокс-блокнот" loading="lazy">
               </div>
               <div class="type-text">
                 <h3>Румбокс-блокнот</h3>
@@ -163,7 +168,7 @@
     <section class="section advantages" id="advantages">
       <div class="container">
         <div class="section-heading">
-          <h2>Преимущества румбокса</h2>
+          <h2>Преимущества</h2>
           <span>04</span>
         </div>
         <div class="advantages-layout">
@@ -194,7 +199,7 @@
             </button>
             <button class="advantage-card" type="button" aria-expanded="false" data-info-image="фотки обр/DSC_0082.jpg" data-info-alt="">
               <p class="advantage-summary">Антистресс, медитация, перезагрузка</p>
-              <h3>Расслабление</h3>
+              <h3>Расслабление <br>ㅤ</h3>
               <p class="advantage-details">В условиях современного мира, перегруженного стрессом и информационным шумом, румбоксы помогают справляться с напряжением. Процесс их сборки действует как медитативная практика: монотонное и ритмичное взаимодействие с мелкими элементами переводит нервную систему в спокойное состояние.</p>
               <span class="card-arrow" aria-hidden="true"><img src="фотки обр/11 иконка.png" alt=""></span>
             </button>
@@ -204,9 +209,32 @@
       </div>
     </section>
 
-    <section class="scheme" id="inside" aria-label="Румбокс изнутри">
+    <section class="section scheme" id="inside">
       <div class="container">
-        <img src="Блоки png/Slice 6.png" alt="Схема устройства румбокса изнутри" loading="lazy">
+        <div class="section-heading scheme-heading-mobile">
+          <h2>Румбокс изнутри</h2>
+          <span>05</span>
+        </div>
+        <div class="scheme-media">
+          <div class="scheme-picture">
+            <img class="scheme-image-desktop" src="фотки обр/Макет дома.png?v=20260529" alt="Схема устройства румбокса изнутри" loading="lazy">
+            <img class="scheme-image-mobile" src="фотки обр/Макет дома моб.png?v=20260529" alt="Схема устройства румбокса изнутри" loading="lazy">
+          </div>
+          <div class="scheme-hotspots" aria-label="Подписи к схеме румбокса">
+            <button class="scheme-hotspot hotspot-1" type="button" data-scheme-index="1" data-scheme-label="Лицевая сторона крыши" aria-label="1: Лицевая сторона крыши"></button>
+            <button class="scheme-hotspot hotspot-2" type="button" data-scheme-index="2" data-scheme-label="Левая стена" aria-label="2: Левая стена"></button>
+            <button class="scheme-hotspot hotspot-3" type="button" data-scheme-index="3" data-scheme-label="Основные окна" aria-label="3: Основные окна"></button>
+            <button class="scheme-hotspot hotspot-4" type="button" data-scheme-index="4" data-scheme-label="Парадное окно" aria-label="4: Парадное окно"></button>
+            <button class="scheme-hotspot hotspot-5 is-active" type="button" data-scheme-index="5" data-scheme-label="Правая сторона крыши" aria-label="5: Правая сторона крыши" aria-pressed="true"></button>
+            <button class="scheme-hotspot hotspot-6" type="button" data-scheme-index="6" data-scheme-label="Передняя часть крыши" aria-label="6: Передняя часть крыши"></button>
+            <button class="scheme-hotspot hotspot-7" type="button" data-scheme-index="7" data-scheme-label="Задняя часть крыши" aria-label="7: Задняя часть крыши"></button>
+            <button class="scheme-hotspot hotspot-8" type="button" data-scheme-index="8" data-scheme-label="Правая стена" aria-label="8: Правая стена"></button>
+            <button class="scheme-hotspot hotspot-9" type="button" data-scheme-index="9" data-scheme-label="Пристройка дома" aria-label="9: Пристройка дома"></button>
+            <button class="scheme-hotspot hotspot-10" type="button" data-scheme-index="10" data-scheme-label="Второй этаж" aria-label="10: Второй этаж"></button>
+            <button class="scheme-hotspot hotspot-11" type="button" data-scheme-index="11" data-scheme-label="Первый этаж" aria-label="11: Первый этаж"></button>
+          </div>
+        </div>
+        <p class="scheme-caption" data-scheme-caption>5: Правая сторона крыши</p>
       </div>
     </section>
 
@@ -217,13 +245,6 @@
           <span>06</span>
         </div>
         <div class="steps-map">
-          <svg class="steps-curve" viewBox="0 0 1600 850" preserveAspectRatio="none" aria-hidden="true">
-            <path pathLength="1" d="M 655 128 H 785"></path>
-            <path pathLength="1" d="M 835 128 H 980"></path>
-            <path pathLength="1" d="M 1458 210 C 1538 292 1540 395 1480 455 C 1440 490 1375 500 1295 500 H 1050"></path>
-            <path pathLength="1" d="M 600 500 H 150 C 84 500 52 526 62 586 V 690"></path>
-            <path pathLength="1" d="M 655 744 H 1130 C 1180 744 1208 716 1208 670"></path>
-          </svg>
           <article class="step-card step-one">
             <div>
               <h3>Коробка</h3>
@@ -283,7 +304,8 @@
         <div class="learn-more">
           <h2>Узнать больше</h2>
           <p>Погрузись в мир миниатюры</p>
-          <a class="button" href="#meaning">Читать</a>
+          <a class="button button-pdf-desktop" href="фотки обр/info.pdf" target="_blank" rel="noopener" type="application/pdf">Читать</a>
+          <a class="button button-pdf-mobile" href="фотки обр/info_mob.pdf" target="_blank" rel="noopener" type="application/pdf">Читать</a>
         </div>
       </div>
     </section>
@@ -294,17 +316,17 @@
       <a class="footer-logo" href="#top">РУМБОКС</a>
       <nav class="footer-nav" aria-label="Навигация в подвале">
         <a href="#meaning">Значение</a>
-        <a href="#types">Виды</a>
         <a href="#inside">Составляющие</a>
-        <a href="#inside">Румбокс изнутри</a>
+        <a href="#types">Виды</a>
         <a href="#advantages">Преимущества</a>
-        <a href="#gallery">Галерея</a>
+        <a href="#inside">Румбокс изнутри</a>
         <a href="#assembly">Сборка</a>
+        <a href="#gallery">Галерея</a>
       </nav>
       <p>© 2026</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260529-11"></script>
 </body>
 </html>
