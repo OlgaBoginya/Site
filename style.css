@@ -42,7 +42,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -51,7 +51,7 @@ body {
   color: var(--text);
   background: #fff;
   font-family: var(--font-body);
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -130,10 +130,20 @@ h2 {
   margin: 0 auto;
 }
 
+.site-header,
+.site-footer {
+  overflow-x: clip;
+}
+
 .site-header {
   height: 104px;
   color: #fff;
   background: var(--teal-dark);
+}
+
+.site-header .container,
+.site-footer .container {
+  width: min(var(--container), calc(100% - 80px));
 }
 
 .header-inner {
@@ -154,8 +164,10 @@ h2 {
 .footer-nav {
   display: flex;
   align-items: center;
-  gap: 44px;
-  font-size: 23px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px clamp(22px, 2.8vw, 44px);
+  font-size: clamp(18px, 1.6vw, 23px);
 }
 
 .main-nav a,
@@ -262,9 +274,9 @@ h2 {
 
 .hero-media img {
   position: absolute;
-  right: -50px;
+  right: 0;
   top: 110px;
-  width: min(850px);
+  width: min(760px, 52vw);
   max-width: none;
 }
 
@@ -478,6 +490,10 @@ h2 {
   transition: transform .32s var(--ease-soft), box-shadow .32s ease, border-color .25s ease;
 }
 
+.type-card-mobile-extra {
+  display: none;
+}
+
 .type-card:hover {
   border-color: var(--accent);
   box-shadow: var(--shadow-soft);
@@ -537,7 +553,7 @@ h2 {
   position: relative;
   height: 955px;
   margin-top: 36px;
-  --numbers-side-offset: min(380px, calc(50vw - 300px));
+  --numbers-side-offset: min(380px, calc(50vw - 325px));
 }
 
 .numbers-ring {
@@ -1543,6 +1559,10 @@ h3 {
     margin-top: 0;
     border-radius: 8px;
     scroll-snap-align: start;
+  }
+
+  .type-card-mobile-extra {
+    display: block;
   }
 
   .type-image,
