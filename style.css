@@ -568,7 +568,7 @@ h2 {
   animation: ringBreath 4.8s ease-in-out infinite;
 }
 
-.numbers-image {
+ .numbers-image{
   position: absolute;
   left: 50%;
   top: 360px;
